@@ -1,0 +1,26 @@
+<html lang="en">
+    <head>
+        {%load static%}
+        {%load widget_tweaks%}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{%static 'login.css'%}">
+        <title>login</title>
+    </head>
+    <body>
+        <script src="{%static 'login.js'%}">
+
+        </script>
+        <hr>
+        <div class="body">
+            <h1 id="banner">Login</h1>
+            <p id="banner2"></p>
+        </div>
+        <form method="post" class="loginbody">
+            {% csrf_token %}
+            {{formu}}
+            <button id="lbutton" type="submit">Login</button>
+        </form>
+    </body>
+</html>
